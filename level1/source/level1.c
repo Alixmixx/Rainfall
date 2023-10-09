@@ -7,9 +7,9 @@ void run(void)
     return;
 }
 
-void main(void)
+int main(void)
 {
     char buffer[76];
     gets(buffer);
-    return;
+    return 0;
 }
