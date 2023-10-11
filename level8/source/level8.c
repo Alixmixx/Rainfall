@@ -8,8 +8,6 @@ int main(void)
     char cVar1;
     char *pcVar5;
     char *size;
-    FILE *nitems;
-    FILE *stream;
     char *src;
     char *input;
 
