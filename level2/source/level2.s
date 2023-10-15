@@ -37,7 +37,3 @@
     0x08048545      e88affffff     call sym.p
     0x0804854a      c9             leave
     0x0804854b      c3             ret
-    0x0804854c      90             nop
-    0x0804854d      90             nop
-    0x0804854e      90             nop
-    0x0804854f      90             nop

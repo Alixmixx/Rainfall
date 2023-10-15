@@ -85,3 +85,29 @@ int main(int argc, char **argv, char **envp);
 0x080485fc      mov     eax, 0
 0x08048601      leave
 0x08048602      ret
+
+;-- _GLOBAL_OFFSET_TABLE_:
+0x08049908      cmp     al, 0x98   ; 152 ; [22] -rw- section size 48 named .got.plt
+0x0804990a      add     al, 8
+0x0804990c      add     byte [eax], al
+0x0804990e      add     byte [eax], al
+0x08049910      add     byte [eax], al
+0x08049912      add     byte [eax], al
+;-- printf:
+0x08049914      .dword 0x080483b6  ; RELOC 32 printf
+;-- fgets:
+0x08049918      .dword 0x080483c6  ; RELOC 32 fgets
+;-- time:
+0x0804991c      .dword 0x080483d6  ; RELOC 32 time
+;-- strcpy:
+0x08049920      .dword 0x080483e6  ; RELOC 32 strcpy
+;-- malloc:
+0x08049924      .dword 0x080483f6  ; RELOC 32 malloc
+;-- puts:
+0x08049928      .dword 0x08048406  ; RELOC 32 puts
+;-- __gmon_start__:
+0x0804992c      .dword 0x08048416  ; RELOC 32 __gmon_start__
+;-- __libc_start_main:
+0x08049930      .dword 0x08048426  ; RELOC 32 __libc_start_main
+;-- fopen:
+0x08049934      .dword 0x08048436  ; RELOC 32 fopen

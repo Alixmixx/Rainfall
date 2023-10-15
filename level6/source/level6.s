@@ -41,4 +41,3 @@
 0x080484d0      ffd0           call eax
 0x080484d2      c9             leave
 0x080484d3      c3             ret
-0x080484d4      90             nop

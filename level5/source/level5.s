@@ -30,3 +30,25 @@
 0x0804850f      c9             leave
 0x08048510      c3             ret
 
+;-- _GLOBAL_OFFSET_TABLE_:
+0x08049818      dec     esp        ; [22] -rw- section size 40 named .got.plt
+0x08049819      xchg    edi, eax
+0x0804981a      add     al, 8
+0x0804981c      add     byte [eax], al
+0x0804981e      add     byte [eax], al
+0x08049820      add     byte [eax], al
+0x08049822      add     byte [eax], al
+;-- printf:
+0x08049824      .dword 0x08048386  ; RELOC 32 printf
+;-- _exit:
+0x08049828      .dword 0x08048396  ; RELOC 32 _exit
+;-- fgets:
+0x0804982c      .dword 0x080483a6  ; RELOC 32 fgets
+;-- system:
+0x08049830      .dword 0x080483b6  ; RELOC 32 system
+;-- __gmon_start__:
+0x08049834      .dword 0x080483c6  ; RELOC 32 __gmon_start__
+;-- exit:
+0x08049838      .dword 0x080483d6  ; RELOC 32 exit
+;-- __libc_start_main:
+0x0804983c      .dword 0x080483e6  ; RELOC 32 __libc_start_main
