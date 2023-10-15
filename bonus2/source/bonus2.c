@@ -2,7 +2,7 @@ int language = 0;
 
 int greetuser(char *name)
 {
-	char greeting[80];
+	char greeting[76];
 
 	if (language == 1)
 		strcpy(greeting, "Goedemiddag! ");
@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 		return 1;
 
 	strncpy(buffer1, argv[1], 40);
-	strncpy(buffer2, argv[2], 32); // buffer2 + 0x28
+	strncpy(buffer2, argv[2], 32);
 
 	char *lang_ptr = getenv("LANG");
 	if (lang_ptr)
@@ -37,3 +37,4 @@ int main(int argc, char **argv)
 	}
 
 	return greetuser(buffer1);
+}
